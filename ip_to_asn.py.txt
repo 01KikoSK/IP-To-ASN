@@ -1,0 +1,10 @@
+from pyasn import pyasn
+
+# Načítajte databázu ASN
+asn_db = pyasn('ipasn.dat')  # Nahraďte 'ipasn.dat' cestou k vašej databáze
+
+# Získajte ASN pre danú IP adresu
+ip_address = '8.8.8.8'
+asn, prefix = asn_db.lookup(ip_address)
+
+print(f"ASN for {ip_address}: {asn}")
